@@ -20,7 +20,7 @@ export default function Page({ left_numbers, winner }: PageProps) {
       {
         left_numbers.map((num: number) => {
           return (
-            <div>
+            <div key={num.toString()}>
               {num}
             </div>
           )
