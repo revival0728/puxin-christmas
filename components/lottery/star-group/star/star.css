@@ -1,0 +1,52 @@
+span.star {
+  display: inline-block;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  border-radius: 10px;
+  background-color: white;
+  top: 10vh;
+  left: 10vw;
+  opacity: 0;
+  box-shadow: 0px 0px 0.5px 0.5px rgba(255, 255, 255, 0.938);
+  animation-name: twinkle;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 10;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+span.star:nth-of-type(4n - 1) {
+  box-shadow: 0px 0px 1.5px 1.5px rgba(255, 255, 255, 0.938);
+}
+span.star:nth-of-type(4n - 2) {
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.938);
+}
+span.star:nth-of-type(4n - 3) {
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.938);
+}
+span.star:nth-of-type(6n - 1) {
+  animation-delay: 1s;
+}
+span.star:nth-of-type(6n - 2) {
+  animation-delay: 2s;
+}
+span.star:nth-of-type(6n - 3) {
+  animation-delay: 3s;
+}
+span.star:nth-of-type(6n - 3) {
+  animation-delay: 4s;
+}
+span.star:nth-of-type(6n - 3) {
+  animation-delay: 5s;
+}
