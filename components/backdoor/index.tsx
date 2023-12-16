@@ -68,7 +68,7 @@ export default function BackDoor() {
     <>
       <div className='m-3'>
         <div className='my-3'>
-          <span className='mx-2 block w-full border-2 border-slate-500 p-1 overflow-auto'>當前抽獎箱: {data === null ? '[]' : data}</span> 
+          <span className='mx-2 inline-block max-w-full border-2 border-slate-500 p-1 overflow-auto'>當前抽獎箱: {data === null ? '[]' : data}</span> 
         </div>
         <div className='my-3'>
           <input type='number' className='mx-2 border-2 border-slate-500 p-1' onChange={(e) => setInit(Number(e.target.value))} />
