@@ -9,12 +9,12 @@ export default function BackDoor() {
   const [init, setInit] = useState<number>(0)
   const handleInit = () => {
     const arData = []
-    for(let i = 1; i <= init; ++i)
+    for (let i = 1; i <= init; ++i)
       arData.push(i)
     setData(JSON.stringify(arData))
   }
   const handleAdd = () => {
-    if(data === null) {
+    if (data === null) {
       alert('Data is null!')
       return
     }
@@ -23,12 +23,12 @@ export default function BackDoor() {
       let l = 0
       let r = arData.length
       let m = Math.floor((l + r) / 2)
-      while(l < r) {
-        if(arData[m] < v)
+      while (l < r) {
+        if (arData[m] < v)
           l = m + 1
         else
           r = m
-        m = Math.floor((l + r) / 2) 
+        m = Math.floor((l + r) / 2)
       }
       arData.splice(m, 0, v)
     }
@@ -36,7 +36,7 @@ export default function BackDoor() {
     setData(JSON.stringify(arData))
   }
   const handleRm = () => {
-    if(data === null) {
+    if (data === null) {
       alert('Data is null!')
       return
     }
@@ -50,9 +50,9 @@ export default function BackDoor() {
     setData(JSON.stringify(arData))
   }
   const handleSave = () => {
-    if(localStorage.getItem('log') === null)
+    if (localStorage.getItem('log') === null)
       localStorage.setItem('log', JSON.stringify([]))
-    if(data === null) {
+    if (data === null) {
       localStorage.setItem('parts', JSON.stringify([]))
       return
     }
@@ -68,7 +68,7 @@ export default function BackDoor() {
     <>
       <div className='m-3'>
         <div className='my-3'>
-          <span className='mx-2 inline-block max-w-full border-2 border-slate-500 p-1 overflow-auto'>當前抽獎箱: {data === null ? '[]' : data}</span> 
+          <span className='mx-2 inline-block max-w-full border-2 border-slate-500 p-1 overflow-auto'>當前抽獎箱: {data === null ? '[]' : data}</span>
         </div>
         <div className='my-3'>
           <input type='number' className='mx-2 border-2 border-slate-500 p-1' onChange={(e) => setInit(Number(e.target.value))} />

@@ -70,12 +70,12 @@ export default function Lottery() {
       <div>
         <StarGroup />
         <BuildingGroup />
-        <div className='absolute block top-0 left-0 h-screen w-screen flex justify-center items-center bg-gradient-to-b from-[#001430] via-[#001430] via-30% to-[#013885]'>
+        <div className='absolute top-0 left-0 h-screen w-screen flex justify-center items-center bg-gradient-to-b from-[#001430] via-[#001430] via-30% to-[#013885]'>
           <div onLoad={handleLoad} className='relative block translate-y-[-5vh] z-20 select-none h-[50vh] w-[50vh] bg-[#d1cd49] rounded-[50vh] shadow-[#d1cd49] shadow-[0_0_5vh_2vh]'>
             <button onClick={handleClick} className='flex w-full h-full justify-center items-center text-[20vh] text-white'>
               {
                 winner ?
-                <span className='grid grid-cols-3 block w-[67%] text-center'>
+                <span className='grid grid-cols-3 w-[67%] text-center'>
                   {
                     winner.padStart(3, '0').split('').map((v, i) => {
                       return <span key={i}>{v}</span>
