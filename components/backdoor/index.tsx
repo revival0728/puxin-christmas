@@ -60,6 +60,15 @@ export default function BackDoor() {
     alert('抽獎箱已儲存')
   }
 
+  const handleCleanAllWinners = () => {
+    for(let i = 0; i < 5; ++i) {
+      const Id = `winner${i + 1}`
+      if(localStorage.getItem(Id) === null) continue
+      localStorage.setItem(Id, 'null')
+    }
+    alert('所有中獎者已清除')
+  }
+
   useEffect(() => {
     setData(localStorage.getItem('parts'))
   }, [])
@@ -84,6 +93,7 @@ export default function BackDoor() {
         </div>
         <div className='my-3'>
           <button className='mx-2 border-2 border-slate-500 p-1' onClick={handleSave}>儲存抽獎箱</button>
+          <button className='mx-2 border-2 border-slate-500 p-1' onClick={handleCleanAllWinners}>清除所有中獎者</button>
         </div>
       </div>
     </>

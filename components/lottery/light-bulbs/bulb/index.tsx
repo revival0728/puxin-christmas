@@ -32,7 +32,9 @@ export default function Bulb({ winner, on, handleLoad, handleClick }: BulbPropTy
               }
             </button>
           </div> :
-          <div onLoad={handleLoad} className='relative block translate-y-[-5vh] z-20 h-[50vh] w-[50vh] bg-gradient-radial from-transparent from-[60%] to-[#dbdbdb] opacity-20 rounded-[50vh]' />
+          <div onLoad={handleLoad} className='relative block translate-y-[-5vh] z-20 h-[50vh] w-[50vh] bg-gradient-radial from-transparent from-[60%] to-[#dbdbdb] opacity-50 rounded-[50vh]'>
+            <button onClick={handleClick} className='block w-full h-full'/>
+          </div>
         }
       </div>
     </>

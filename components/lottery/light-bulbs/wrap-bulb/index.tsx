@@ -8,10 +8,10 @@ export default function WrapBulb({ winner, on, handleLoad, handleClick }: BulbPr
     <>
       <div className='scale-[50%] odd:translate-y-[-40vh] even:translate-y-[-60vh]'>
         <Bulb
-          winner={'1'} 
-          on={true}
-          handleLoad={() => {}}
-          handleClick={() => {}}
+          winner={winner} 
+          on={on}
+          handleLoad={handleLoad}
+          handleClick={handleClick}
         />
       </div>
     </>
