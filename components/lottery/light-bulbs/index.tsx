@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { getWinner, getRandomIntInclusive } from '@/lib/random'
-import { numTonumarray, numarrayToString, time_sleep } from '@/lib/algo'
+import { time_sleep } from '@/lib/algo'
 import WrapBulb from "./wrap-bulb"
 import type { MouseEventHandler, ReactEventHandler } from 'react'
 
@@ -110,7 +110,7 @@ export default function LightBulbs() {
 
   return (
     <>
-      <div className='grid grid-cols-5 absolute top-0 left-0 w-screen h-screen'>
+      <div className='grid grid-cols-5 absolute top-0 left-0 w-screen h-screen z-20'>
         <WrapBulb
           winner={winner1}
           on={on1}
